@@ -15,29 +15,42 @@ exports.createVoucher = async (req, res, next) => {
     });
 
     try {
-        await Promise.all(vouchers.map(async (voucher) => {
-            await Voucher.create({
-                code: voucher.code,
-                flatAmount: voucher.flatAmount,
-                percentage: voucher.percentage,
-                kdLimit: voucher.kdLimit,
-                redemptionCount: voucher.redemptionCount,
-                redemptionLimit: voucher.redemptionLimit,
-                customerRedemptionLimit: voucher.customerRedemptionLimit,
-                startDate: moment(new Date((voucher.startDate - (25567 + 2)) * 86400 * 1000)).format('YYYY-MM-DD'),
-                endDate: moment(new Date((voucher.endDate - (25567 + 2)) * 86400 * 1000)).format('YYYY-MM-DD'),
-                isValid: voucher.isValid,
-                isValidForThisCustomer: voucher.isValidForThisCustomer,
-                heroPhoto: voucher.heroPhoto,
-                description: voucher.description,
-                customerRedemptionsCount: voucher.customerRedemptionLimit,
-                validEmailDomains: voucher.validEmailDomains
-            });
+        const errors = [];
+        await Promise.all(vouchers.map(async (voucher, index) => {
+            if (voucher.code === '') {
+                errors.push(`Voucher ${index + 1} code cannot be empty`);
+            } else if (voucher.percentage === '') {
+                errors.push(`Voucher ${index + 1} percentage cannot be empty`);
+            } else if (voucher.isValid === '') {
+                errors.push(`Voucher ${index + 1} isValid cannot be empty`);
+            }
+
+            if (errors.length <= 0) {
+                await Voucher.create({
+                    code: voucher.code,
+                    flatAmount: voucher.flatAmount,
+                    percentage: voucher.percentage,
+                    kdLimit: voucher.kdLimit,
+                    redemptionCount: voucher.redemptionCount,
+                    redemptionLimit: voucher.redemptionLimit,
+                    customerRedemptionLimit: voucher.customerRedemptionLimit,
+                    startDate: moment(new Date((voucher.startDate - (25567 + 2)) * 86400 * 1000)).format('YYYY-MM-DD'),
+                    endDate: moment(new Date((voucher.endDate - (25567 + 2)) * 86400 * 1000)).format('YYYY-MM-DD'),
+                    isValid: voucher.isValid,
+                    isValidForThisCustomer: voucher.isValidForThisCustomer,
+                    heroPhoto: voucher.heroPhoto,
+                    description: voucher.description,
+                    customerRedemptionsCount: voucher.customerRedemptionLimit,
+                    validEmailDomains: voucher.validEmailDomains
+                });
+            }
         }));
+
+        if (errors.length > 0)
+            return res.status(422).json({ message: errors });
 
         return res.status(201).json({ message: 'File stored and vouchers created' });
     } catch (err) {
-        console.log(err)
         res.status(500).json({ message: 'Error' });
         next(err)
     }
