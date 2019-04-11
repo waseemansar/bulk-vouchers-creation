@@ -1,0 +1,29 @@
+{
+    "development": {
+        "database": "bulk-vouchers",
+        "host": "localhost",
+        "dialect": "postgres",
+        "logging": false,
+        "define": {
+            "timestamps": true,
+            "updatedAt": false
+        }
+    },
+    "test": {
+        "database": "bulk-vouchers-test",
+        "host": "localhost",
+        "dialect": "postgres",
+        "logging": false,
+        "define": {
+            "timestamps": true,
+            "updatedAt": false
+        }
+    },
+    "production": {
+        "username": "root",
+        "password": null,
+        "database": "database_production",
+        "host": "127.0.0.1",
+        "dialect": "mysql"
+    }
+}
