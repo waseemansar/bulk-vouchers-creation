@@ -48,7 +48,7 @@ module.exports.createTestVoucherFile = () => {
             heroPhoto: 'https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg',
             description: casual.sentence,
             customerRedemptionsCount: 1,
-            validEmailDomains: ''
+            validEmailDomains: casual.sentence
         });
     });
 
