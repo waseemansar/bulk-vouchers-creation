@@ -1,0 +1,11 @@
+code,flatAmount,percentage,kdLimit,redemptionCount,redemptionLimit,customerRedemptionLimit,startDate,endDate,isValid,isValidForThisCustomer,heroPhoto,description,customerRedemptionLimit,validEmailDomains
+CORNSILK,76.47,5,7.18,90,22,16,2019-04-11,2019-04-11,true,false,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,Qui nihil temporibus in magnam fugiat aut ipsa.,1,
+DARKSEAGREEN,34.56,5,4.72,60,89,11,2019-04-11,2019-04-11,false,true,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,Et pariatur commodi facilis et consequatur doloribus perspiciatis.,1,
+TOMATO,44.85,3,4.02,82,7,3,2019-04-11,2019-04-11,true,false,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,Dignissimos fuga doloremque assumenda ut cumque laborum quas hic.,1,
+SEAGREEN,93.19,2,7.63,14,143,36,2019-04-11,2019-04-11,true,true,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,Aut impedit nihil qui et voluptas esse hic.,1,
+FUCHSIA,77.50,4,1.08,99,130,15,2019-04-11,2019-04-11,false,true,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,Velit nobis dolores incidunt.,1,
+MEDIUMSPRINGGREEN,17.56,5,5.01,44,97,42,2019-04-11,2019-04-11,false,true,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,In quo harum.,1,
+DARKTURQUOISE,61.11,5,2.44,74,121,16,2019-04-11,2019-04-11,false,true,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,Pariatur facere soluta et et in veritatis.,1,
+GHOSTWHITE,45.25,4,5.42,73,106,7,2019-04-11,2019-04-11,true,true,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,Natus dolorem quas eum quaerat rerum aperiam qui.,1,
+BROWN,97.21,5,9.26,38,138,14,2019-04-11,2019-04-11,false,false,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,Quod porro sed inventore repudiandae eum dolores non quae.,1,
+DEEPPINK,31.55,2,3.09,67,89,20,2019-04-11,2019-04-11,false,true,https://i.pinimg.com/originals/57/bb/bd/57bbbdcde92c68b1fe74a4b2a7ab47a8.jpg,Nihil neque omnis nesciunt est quaerat qui.,1,
