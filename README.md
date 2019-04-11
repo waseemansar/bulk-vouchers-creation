@@ -1,5 +1,7 @@
 # bulk-vouchers-creation
 
+Express Js and Postgresql app.
+
 ### Requirements
 
 * **Node** 10.0.0 or later
